@@ -19,10 +19,6 @@ export default function App() {
           return { count: 0 };
         case 'set':
           return { count: action.valued.target.value };
-        case 'incrementBy':
-          return { count: state.count + action.payload };
-        case 'decrementBy':
-          return { count: state.count - action.payload };
         default:
           return state;
       }
