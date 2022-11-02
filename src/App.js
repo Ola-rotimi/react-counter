@@ -1,20 +1,27 @@
-import { useReducer } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useReducer } from 'react';
+import Counter from './pages/Counter';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import About from './pages/About';
 
 export default function App() {
   const [state, dispatch] = useReducer(
     (state, action) => {
       switch (action.type) {
-        case "increment":
+        case 'increment':
           return { count: state.count + 1 };
-        case "decrement":
+        case 'decrement':
           return { count: state.count - 1 };
-        case "reset":
+        case 'reset':
           return { count: 0 };
-        case "set":
+        case 'set':
           return { count: action.payload };
-        case "incrementBy":
+        case 'incrementBy':
           return { count: state.count + action.payload };
-        case "decrementBy":
+        case 'decrementBy':
           return { count: state.count - action.payload };
         default:
           return state;
@@ -24,20 +31,16 @@ export default function App() {
   );
 
   return (
-    <div className="container">
-      <h1>Count: {state.count}</h1>
-      <button onClick={() => dispatch({ type: "decrementBy", payload: 10 })}>
-        Decrement by 10
-      </button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
-      <button onClick={() => dispatch({ type: "set", payload: 10 })}>
-        Set Value to 10
-      </button>
-      <button onClick={() => dispatch({ type: "increment" })}>Increment</button>
-      <button onClick={() => dispatch({ type: "incrementBy", payload: 10 })}>
-        Increment by 10
-      </button>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="counter" element={<Counter state={state} dispatch={dispatch} />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }

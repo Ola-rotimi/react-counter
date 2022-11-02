@@ -13,13 +13,98 @@ body {
   background-color: #f8ede3;
 }
 
-.container {
+/* Path: src\components\Navbar\index.css */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.navbar--logo a{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e14d2a;
+  text-decoration: none;
+}
+
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li{
+  margin-left: 1rem;
+}
+
+.navbar ul li a{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e14d2a;
+  background-color: #f8ede3;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover{
+  color: #f8ede3;
+  background-color: #e14d2a;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Path: src\pages\Home\index.css */
+.home--container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home--container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+}
+
+.home--container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+}
+
+.home--container a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #f8ede3;
+  background-color: #e14d2a;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home--container a:hover {
+  color: #e14d2a;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Path: src\pages\Counter\index.css */
+.counter--container {
   max-width: 50%;
   min-height: 200px;
   padding: 20px 0;
   background-color: white;
   border-radius: 10px;
-  margin: 15% auto;
+  margin: 11% auto;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -27,13 +112,13 @@ body {
   color: #e14d2a;
 }
 
-.container h1 {
+.counter--container h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.container button {
+.counter--container button {
   margin: 10px;
   padding: 10px 30px;
   border: none;
@@ -46,7 +131,74 @@ body {
   cursor: pointer;
 }
 
-.container button:hover {
+.counter--container button:hover {
   background-color: #e14d2a;
   color: #aebdca;
+}
+
+/* Path: src\pages\About\index.css */	
+.about--container {
+  margin: auto;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about--container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+}
+
+.about--container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+}
+
+/* Path: src\pages\Error\index.css */
+.error--container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error--container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+}
+
+.error--container a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e14d2a;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.error--container a:hover {
+  color: #aebdca;
+}
+
+/* Path: src\components\Footer\index.css */
+.footer--container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
