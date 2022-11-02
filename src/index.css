@@ -136,6 +136,23 @@ body {
   color: #aebdca;
 }
 
+.counter--container input {
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #e14d2a;
+  box-shadow: 2px 5px 5px #d0b8a8;
+}
+
+.counter--container input:focus {
+  outline: none;
+}
+
 /* Path: src\pages\About\index.css */	
 .about--container {
   margin: auto;
