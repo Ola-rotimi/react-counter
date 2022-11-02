@@ -1,13 +1,52 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Oswald", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #f8ede3;
+}
+
+.container {
+  max-width: 50%;
+  min-height: 200px;
+  padding: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  margin: 15% auto;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px 10px #d0b8a8;
+  color: #e14d2a;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container button {
+  margin: 10px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #aebdca;
+  color: #e14d2a;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 2px 5px 5px 5px #d0b8a8;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #e14d2a;
+  color: #aebdca;
 }
