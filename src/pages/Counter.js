@@ -10,10 +10,10 @@ export default function Counter({ state, dispatch }) {
         Set to 10
       </button>
       <button onClick={() => dispatch({ type: "incrementBy", payload: 10 })}>
-        Increment by 5
+        Increment by 10
       </button>
       <button onClick={() => dispatch({ type: "decrementBy", payload: 10 })}>
-        Decrement by 5
+        Decrement by 10
       </button>
     </div>
   );
